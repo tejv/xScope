@@ -41,13 +41,13 @@
                      <children>
                         <VBox maxHeight="-Infinity" prefHeight="486.0" prefWidth="236.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                              <ToolBar maxHeight="-Infinity" prefHeight="26.0" prefWidth="236.0" VBox.vgrow="NEVER">
                                  <items>
                                     <CheckBox fx:id="chkGraphCC1" mnemonicParsing="false" selected="true" text="CC1" />
                                     <CheckBox fx:id="chkGraphCC2" mnemonicParsing="false" selected="true" text="CC2" />
                                  </items>
                               </ToolBar>
-                              <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="0.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                              <ToolBar maxHeight="-Infinity" prefHeight="0.0" prefWidth="236.0" VBox.vgrow="NEVER">
                                  <items>
                                     <CheckBox fx:id="chkGraphVbus" mnemonicParsing="false" selected="true" text="VBUS" />
                                     <CheckBox fx:id="chkGraphAmp" mnemonicParsing="false" selected="true" text="AMP" />

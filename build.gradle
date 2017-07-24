@@ -257,7 +257,7 @@ task major_release_skip_ver_inc() {
 //        pom.project {
 //            groupId = 'org.ykc'
 //            version = jar.version
-//            artifactId = 'LiveGraph'
+//            artifactId = 'xScope'
 //            packaging = 'jar'
 //        }
 //    }
