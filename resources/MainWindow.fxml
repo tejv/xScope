@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.StatusBar?>
+
+<BorderPane fx:id="bPaneMainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ykc.xscope.MainWindowController">
+   <center>
+      <AnchorPane minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane minWidth="0.0" prefHeight="548.0" prefWidth="827.0">
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <LineChart fx:id="lchartData" prefHeight="498.0" prefWidth="689.0" title="xScope">
+                                <xAxis>
+                                  <NumberAxis side="BOTTOM" fx:id="xAxis" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="yAxis" side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox maxHeight="-Infinity" prefHeight="486.0" prefWidth="236.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <items>
+                                    <CheckBox fx:id="chkGraphCC1" mnemonicParsing="false" selected="true" text="CC1" />
+                                    <CheckBox fx:id="chkGraphCC2" mnemonicParsing="false" selected="true" text="CC2" />
+                                 </items>
+                              </ToolBar>
+                              <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="0.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <items>
+                                    <CheckBox fx:id="chkGraphVbus" mnemonicParsing="false" selected="true" text="VBUS" />
+                                    <CheckBox fx:id="chkGraphAmp" mnemonicParsing="false" selected="true" text="AMP" />
+                                 </items>
+                              </ToolBar>
+                              <ToolBar minHeight="-Infinity" prefHeight="35.0" prefWidth="236.0" VBox.vgrow="NEVER">
+                                 <items>
+                                    <Label text="X Scale" />
+                                    <ComboBox fx:id="cboxGraphXScale" prefHeight="31.0" prefWidth="124.0" />
+                                 </items>
+                              </ToolBar>
+                              <ToolBar VBox.vgrow="NEVER">
+                                 <items>
+                                    <Label text="Y: " />
+                                    <Label fx:id="lblGraphYValue" text="0" />
+                                 </items>
+                              </ToolBar>
+                              <ToolBar VBox.vgrow="NEVER">
+                                 <items>
+                                    <Label text="X: " />
+                                    <Label fx:id="lblGraphXValue" text="0" />
+                                 </items>
+                              </ToolBar>
+                              <ToolBar VBox.vgrow="NEVER">
+                                 <items>
+                                    <Label text="ΔY: " />
+                                    <Label fx:id="lblGraphDeltaY" text="0" />
+                                 </items>
+                              </ToolBar>
+                              <ToolBar VBox.vgrow="NEVER">
+                                 <items>
+                                    <Label text="ΔX: " />
+                                    <Label fx:id="lblGraphDeltaX" text="0" />
+                                 </items>
+                              </ToolBar>
+                              <ToolBar minHeight="-Infinity" prefHeight="38.0" prefWidth="236.0">
+                                 <items>
+                                    <Button fx:id="bGraphScrollLeft" disable="true" mnemonicParsing="false" />
+                                    <Button fx:id="bGraphScrollRight" disable="true" mnemonicParsing="false" />
+                                 </items>
+                              </ToolBar>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children></AnchorPane>
+   </center>
+   <bottom>
+      <StatusBar fx:id="statusBar" prefHeight="0.0" prefWidth="893.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <VBox prefHeight="43.0" prefWidth="1048.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+               <items>
+                  <Button fx:id="bOne" mnemonicParsing="false" onAction="#bOneClicked" />
+                  <Button fx:id="bAbout" mnemonicParsing="false" onAction="#showAboutMe" />
+                  <TextField fx:id="txtTest" promptText="Enter time" />
+               </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

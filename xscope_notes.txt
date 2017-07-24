@@ -1,0 +1,21 @@
+1. Scenebuilder not showing axis. So in FXML file set the xAxis and yAxis type to NumberAxis manually
+   Also add fx id to access these.
+     <LineChart fx:id="lchartData" prefHeight="498.0" prefWidth="689.0" title="LiveGraph">
+    <xAxis>
+      <NumberAxis side="BOTTOM" fx:id="xAxis"/>
+    </xAxis>
+    <yAxis>
+      <NumberAxis side="LEFT" fx:id="yAxis"/>
+    </yAxis>
+  </LineChart>
+  
+  Then use in controller as 
+  
+    @FXML
+    private NumberAxis xAxis ;
+
+    @FXML
+    private NumberAxis yAxis ;
+    
+2. Get chart css
+3. 
